@@ -11,13 +11,13 @@
 
 @foreach ($products as $product)
     <div>
-        <h2>{{ $product['name'] }}</h2>
-        <p>Цена: {{ number_format($product['cost'], 0, ',', ' ') }} ₽</p>
+        <h2>{{ $product->name }}</h2>
+        <p>Цена: {{ number_format($product->cost, 0, ',', ' ') }} ₽</p>
         
-        @if ($product['amount'] == 0)
+        @if ($product->amount == 0)
             <p>Нет в наличии</p>
         @else
-            <p>Количество: {{ $product['amount'] }}</p>
+            <p>Количество: {{ $product->amount }}</p>
         @endif
     </div>
 @endforeach
