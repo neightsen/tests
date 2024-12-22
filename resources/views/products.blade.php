@@ -19,6 +19,7 @@
         @else
             <p>Количество: {{ $product->amount }}</p>
         @endif
+        <a href="{{ route('product.show', ['id' => $product->id]) }}">Заказать</a>
     </div>
 @endforeach
 
